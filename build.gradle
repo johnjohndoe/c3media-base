@@ -1,0 +1,57 @@
+buildscript {
+
+    ext {
+        assertjVersion = "3.6.2"
+        gradleVersioneyePluginVersion = "1.4.0"
+        gradleVersionsPluginVersion = "0.13.0"
+        junitVersion = "4.12"
+        kotlinVersion = "1.0.6"
+        moshiVersion = "1.3.1"
+        okhttpVersion = "3.5.0"
+        retrofitVersion = "2.1.0"
+        threetenbpVersion = "1.3.3"
+    }
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "com.github.ben-manes:gradle-versions-plugin:$gradleVersionsPluginVersion"
+        classpath "org.standardout:gradle-versioneye-plugin:$gradleVersioneyePluginVersion"
+    }
+}
+
+apply plugin: "com.github.ben-manes.versions"
+apply plugin: "org.standardout.versioneye"
+apply plugin: "kotlin"
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
+    compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    compile "com.squareup.moshi:moshi:$moshiVersion"
+    compile "org.threeten:threetenbp:$threetenbpVersion"
+
+    testCompile "junit:junit:$junitVersion"
+    testCompile "org.assertj:assertj-core:$assertjVersion"
+}
+
+tasks.matching { it instanceof Test }.all {
+    testLogging.events = ["failed", "passed", "skipped"]
+}
+
+apply from: 'gradle/deploy.gradle'
