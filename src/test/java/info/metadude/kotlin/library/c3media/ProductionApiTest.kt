@@ -101,10 +101,7 @@ class ProductionApiTest {
         assertThat(event.slug).isNotNull()
         // assertThat(event.link).isNotNull()
         // assertThat(event.description).isNotNull()
-        assertThat(event.originalLanguage)
-                .isNotNull
-                .isNotEmpty
-                .doesNotContain(Language.UNKNOWN)
+        assertOriginalLanguage(event.originalLanguage)
         assertThat(event.persons).isNotNull
         assertThat(event.tags).isNotNull
         // assertThat(event.date).isNotNull()
@@ -169,10 +166,7 @@ class ProductionApiTest {
         assertThat(event.viewCount).isNotNull()
         assertThat(event.duration).isNotNull()
         assertThat(event.downloadedRecordingsCount).isNotNull()
-        assertThat(event.originalLanguage)
-                .isNotNull
-                .isNotEmpty
-                .doesNotContain(Language.UNKNOWN)
+        assertOriginalLanguage(event.originalLanguage)
         assertThat(event.metadata).isNotNull()
         assertListEventNestedMetadata(event.metadata!!)
     }
@@ -206,10 +200,7 @@ class ProductionApiTest {
         assertThat(event.slug).isNotNull()
         // assertThat(event.link).isNotNull()
         // assertThat(event.description).isNotNull()
-        assertThat(event.originalLanguage)
-                .isNotNull
-                .isNotEmpty
-                .doesNotContain(Language.UNKNOWN)
+        assertOriginalLanguage(event.originalLanguage)
         assertThat(event.persons).isNotNull
         assertThat(event.tags).isNotNull
         // assertThat(event.date).isNotNull()
@@ -352,6 +343,12 @@ class ProductionApiTest {
         }
     }
 
+    private fun assertOriginalLanguage(originalLanguage: List<Language>) {
+        assertThat(originalLanguage)
+                .isNotNull
+                .isNotEmpty
+                .doesNotContain(Language.UNKNOWN)
+    }
 
     private val service: C3MediaService by lazy {
         val interceptor = HttpLoggingInterceptor()
