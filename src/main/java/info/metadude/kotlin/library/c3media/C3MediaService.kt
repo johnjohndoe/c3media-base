@@ -1,9 +1,6 @@
 package info.metadude.kotlin.library.c3media
 
-import info.metadude.kotlin.library.c3media.models.Conference
-import info.metadude.kotlin.library.c3media.models.ConferencesResponse
-import info.metadude.kotlin.library.c3media.models.Event
-import info.metadude.kotlin.library.c3media.models.Recording
+import info.metadude.kotlin.library.c3media.models.*
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -17,7 +14,7 @@ interface C3MediaService {
     fun getConference(@Path("conferenceId") conferenceId: Int): Call<Conference>
 
     @GET("public/events")
-    fun getEvents(): Call<List<Event>>
+    fun getEvents(): Call<EventsResponse>
 
     @GET("public/events/{eventId}")
     fun getEvent(@Path("eventId") eventId: Int): Call<Event>

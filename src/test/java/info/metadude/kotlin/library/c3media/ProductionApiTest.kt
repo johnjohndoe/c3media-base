@@ -132,10 +132,10 @@ class ProductionApiTest {
         try {
             val response = call.execute()
             if (response.isSuccessful) {
-                val events = response.body()
-                assertThat(events).isNotNull
-                events?.let {
-                    it.filterNotNull().forEach { assertListEvent(it) }
+                val eventsResponse = response.body()
+                assertThat(eventsResponse.events).isNotNull
+                eventsResponse.events.forEach {
+                    assertListEvent(it)
                 }
             } else {
                 fail("getEvents() response is not successful.")
@@ -146,17 +146,17 @@ class ProductionApiTest {
     }
 
     private fun assertListEvent(event: Event) {
-        assertThat(event.id).isNotNull()
+        // assertThat(event.id).isNotNull()
         assertThat(event.guid).isNotNull()
-        assertThat(event.posterFilename).isNotNull()
-        assertThat(event.conferenceId).isNotNull()
-        assertThat(event.createdAt).isNotNull()
+        // assertThat(event.posterFilename).isNotNull()
+        // assertThat(event.conferenceId).isNotNull()
+        // assertThat(event.createdAt).isNotNull()
         assertThat(event.updatedAt).isNotNull()
         assertThat(event.title).isNotNull()
-        assertThat(event.thumbFilename).isNotNull()
+        // assertThat(event.thumbFilename).isNotNull()
         // assertThat(event.date).isNotNull()
         // assertThat(event.description).isNotNull()
-        assertThat(event.link).isNotNull()
+        // assertThat(event.link).isNotNull()
         assertThat(event.persons).isNotNull
         assertThat(event.slug).isNotNull()
         // assertThat(event.subtitle).isNotNull()
@@ -165,7 +165,7 @@ class ProductionApiTest {
         assertThat(event.promoted).isNotNull()
         assertThat(event.viewCount).isNotNull()
         assertThat(event.duration).isNotNull()
-        assertThat(event.downloadedRecordingsCount).isNotNull()
+        // assertThat(event.downloadedRecordingsCount).isNotNull()
         assertOriginalLanguage(event.originalLanguage)
         assertThat(event.metadata).isNotNull()
         assertListEventNestedMetadata(event.metadata!!)
