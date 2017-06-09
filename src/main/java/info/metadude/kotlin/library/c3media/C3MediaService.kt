@@ -20,7 +20,7 @@ interface C3MediaService {
     fun getEvent(@Path("eventId") eventId: Int): Call<Event>
 
     @GET("public/recordings")
-    fun getRecordings(): Call<List<Recording>>
+    fun getRecordings(): Call<RecordingsResponse>
 
     @GET("public/recordings/{recordingsId}")
     fun getRecording(@Path("recordingsId") recordingsId: Int): Call<Recording>
