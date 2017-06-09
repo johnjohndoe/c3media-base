@@ -1,7 +1,7 @@
 buildscript {
 
     ext {
-        assertjVersion = "3.6.2"
+        assertjVersion = "3.8.0"
         gradleVersioneyePluginVersion = "1.4.0"
         gradleVersionsPluginVersion = "0.15.0"
         junitVersion = "4.12"
