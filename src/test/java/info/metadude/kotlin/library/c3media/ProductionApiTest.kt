@@ -31,7 +31,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val conferencesResponse = response.body()
-                assertThat(conferencesResponse.conferences).isNotNull
+                assertThat(conferencesResponse!!.conferences).isNotNull
                 conferencesResponse.conferences?.let {
                     it.filterNotNull().forEach { assertListConference(it) }
                 }
@@ -65,7 +65,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val conference = response.body()
-                assertThat(conference).isNotNull()
+                assertThat(conference!!).isNotNull()
                 assertConference(conference)
             } else {
                 fail("getConference() response is not successful.")
@@ -133,7 +133,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val eventsResponse = response.body()
-                assertThat(eventsResponse.events).isNotNull
+                assertThat(eventsResponse!!.events).isNotNull
                 eventsResponse.events.forEach {
                     assertListEvent(it)
                 }
@@ -183,7 +183,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val event = response.body()
-                assertThat(event).isNotNull()
+                assertThat(event!!).isNotNull()
                 assertEvent(event)
             } else {
                 fail("getEvent() response is not successful.")
@@ -259,7 +259,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val recordingsResponse = response.body()
-                assertThat(recordingsResponse.recordings).isNotNull
+                assertThat(recordingsResponse!!.recordings).isNotNull
                 recordingsResponse.recordings.forEach {
                     assertBaseRecording(it)
                 }
@@ -300,7 +300,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val recording = response.body()
-                assertThat(recording).isNotNull()
+                assertThat(recording!!).isNotNull()
                 assertSingleRecording(recording)
             } else {
                 fail("getRecording() response is not successful.")
