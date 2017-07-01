@@ -32,6 +32,10 @@ repositories {
     mavenCentral()
 }
 
+versioneye {
+    exclude project.configurations.findAll { !it.canBeResolved }*.name as String[]
+}
+
 compileJava {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
