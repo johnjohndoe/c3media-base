@@ -5,7 +5,7 @@ import org.threeten.bp.OffsetDateTime
 
 data class Conference(
 
-        val acronym: String,
+        val acronym: String = "",
         @Json(name = "aspect_ratio")
         val aspectRatio: AspectRatio? = null,
         val events: List<Event?>? = null,
@@ -17,7 +17,7 @@ data class Conference(
         val recordingsUrl: String? = null,
         @Json(name = "schedule_url")
         val scheduleUrl: String? = null,
-        val slug: String,
+        val slug: String = "",
         val title: String? = null,
         @Json(name = "updated_at")
         val updatedAt: OffsetDateTime? = null,
