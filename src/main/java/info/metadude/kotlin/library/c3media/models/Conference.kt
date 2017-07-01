@@ -7,7 +7,7 @@ data class Conference(
 
         val acronym: String,
         @Json(name = "aspect_ratio")
-        val aspectRatio: AspectRatio,
+        val aspectRatio: AspectRatio? = null,
         val events: List<Event?>? = null,
         @Json(name = "images_url")
         val imagesUrl: String? = null,
