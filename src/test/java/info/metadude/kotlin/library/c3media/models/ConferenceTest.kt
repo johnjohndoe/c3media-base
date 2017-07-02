@@ -52,7 +52,7 @@ class ConferenceTest {
         return Conference(
                 acronym = "ds2015",
                 aspectRatio = AspectRatio._16_X_9,
-                events = null,
+                events = emptyList(),
                 imagesUrl = "https://static.media.ccc.de/media/events/datenspuren/2015",
                 logoUrl = "https://static.media.ccc.de/media/events/datenspuren/2015/ds2015.png",
                 recordingsUrl = "http://cdn.media.ccc.de/events/datenspuren/2015",
@@ -90,7 +90,7 @@ class ConferenceTest {
         return Conference(
                 acronym = "",
                 aspectRatio = AspectRatio.UNKNOWN,
-                events = null,
+                events = emptyList(),
                 imagesUrl = "",
                 logoUrl = "",
                 recordingsUrl = "",
@@ -115,17 +115,17 @@ class ConferenceTest {
     fun emptyConference(): Conference {
         return Conference(
                 acronym = "",
-                aspectRatio = null,
-                events = null,
-                imagesUrl = null,
-                logoUrl = null,
-                recordingsUrl = null,
-                scheduleUrl = null,
+                aspectRatio = AspectRatio.UNKNOWN,
+                events = emptyList(),
+                imagesUrl = "",
+                logoUrl = "",
+                recordingsUrl = "",
+                scheduleUrl = "",
                 slug = "",
-                title = null,
+                title = "",
                 updatedAt = null,
-                url = null,
-                webgenLocation = null
+                url = "",
+                webgenLocation = ""
         )
     }
 

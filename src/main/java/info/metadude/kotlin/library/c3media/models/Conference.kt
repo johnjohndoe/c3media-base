@@ -7,22 +7,22 @@ data class Conference(
 
         val acronym: String = "",
         @Json(name = "aspect_ratio")
-        val aspectRatio: AspectRatio? = null,
-        val events: List<Event?>? = null,
+        val aspectRatio: AspectRatio = AspectRatio.UNKNOWN,
+        val events: List<Event?> = emptyList(),
         @Json(name = "images_url")
-        val imagesUrl: String? = null,
+        val imagesUrl: String = "",
         @Json(name = "logo_url")
-        val logoUrl: String? = null,
+        val logoUrl: String = "",
         @Json(name = "recordings_url")
-        val recordingsUrl: String? = null,
+        val recordingsUrl: String = "",
         @Json(name = "schedule_url")
-        val scheduleUrl: String? = null,
+        val scheduleUrl: String = "",
         val slug: String = "",
-        val title: String? = null,
+        val title: String = "",
         @Json(name = "updated_at")
         val updatedAt: OffsetDateTime? = null,
-        val url: String? = null,
+        val url: String = "",
         @Json(name = "webgen_location")
-        val webgenLocation: String? = null
+        val webgenLocation: String = ""
 
 )

@@ -45,8 +45,7 @@ class ProductionApiTest {
 
     private fun assertListConference(conference: Conference) {
         assertThat(conference.acronym).isNotNull()
-        // assertThat(conference.aspectRatio).isNotNull()
-        //        .isNotEqualTo(AspectRatio.UNKNOWN)
+        assertThat(conference.aspectRatio).isNotNull()
         assertThat(conference.updatedAt).isNotNull()
         assertThat(conference.title).isNotNull()
         // assertThat(conference.scheduleUrl).isNotNull()
@@ -78,7 +77,6 @@ class ProductionApiTest {
     private fun assertConference(conference: Conference) {
         assertThat(conference.acronym).isNotNull()
         assertThat(conference.aspectRatio).isNotNull()
-                .isNotEqualTo(AspectRatio.UNKNOWN)
         assertThat(conference.updatedAt).isNotNull()
         assertThat(conference.title).isNotNull()
         // conference.scheduleUrl can be null
