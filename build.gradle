@@ -23,39 +23,9 @@ buildscript {
     }
 }
 
-apply plugin: "com.github.ben-manes.versions"
-apply plugin: "org.standardout.versioneye"
-apply plugin: "kotlin"
-
-repositories {
-    jcenter()
-    mavenCentral()
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
 }
-
-versioneye {
-    exclude project.configurations.findAll { !it.canBeResolved }*.name as String[]
-}
-
-compileJava {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-}
-
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    compile "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
-    compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
-    compile "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
-    compile "com.squareup.moshi:moshi:$moshiVersion"
-    compile "org.threeten:threetenbp:$threetenbpVersion"
-
-    testCompile "junit:junit:$junitVersion"
-    testCompile "org.assertj:assertj-core:$assertjVersion"
-}
-
-tasks.matching { it instanceof Test }.all {
-    testLogging.events = ["failed", "passed", "skipped"]
-}
-
-apply from: 'gradle/deploy.gradle'
