@@ -33,9 +33,9 @@ and to your application module `build.gradle`:
 ```groovy
 dependencies {
     // use this for the basic c3media version
-    compile "info.metadude.kotlin.library.c3media:base:${version}"
+    compile "info.metadude.kotlin.library.c3media:base:$version"
     // or use this line for the rx-java-2 version of c3media
-    compile "info.metadude.kotlin.library.c3media:rx-java-2:${version}"
+    compile "info.metadude.kotlin.library.c3media:rx-java-2:$version"
 }
 ```
 
