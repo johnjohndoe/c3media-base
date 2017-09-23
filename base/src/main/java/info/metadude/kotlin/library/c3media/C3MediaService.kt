@@ -4,6 +4,7 @@ import info.metadude.kotlin.library.c3media.models.*
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface C3MediaService {
 
@@ -15,6 +16,9 @@ interface C3MediaService {
 
     @GET("public/events")
     fun getEvents(): Call<EventsResponse>
+
+    @GET("public/events/search")
+    fun searchEvents(@Query("q") query: String): Call<EventsResponse>
 
     @GET("public/events/{eventId}")
     fun getEvent(@Path("eventId") eventId: Int): Call<Event>
