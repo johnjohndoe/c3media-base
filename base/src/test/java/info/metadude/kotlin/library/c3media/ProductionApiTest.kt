@@ -145,6 +145,25 @@ class ProductionApiTest {
         }
     }
 
+    @Test
+    fun `Validates an events search response`() {
+        val call = service.searchEvents("fnord")
+        try {
+            val response = call.execute()
+            if (response.isSuccessful) {
+                val eventsResponse = response.body()
+                assertThat(eventsResponse!!.events).isNotNull
+                eventsResponse.events.forEach {
+                    assertListEvent(it)
+                }
+            } else {
+                fail("getEvents() response is not successful.")
+            }
+        } catch(e: IOException) {
+            fail("Should not throw {$e}")
+        }
+    }
+
     private fun assertListEvent(event: Event) {
         // assertThat(event.id).isNotNull()
         assertThat(event.guid).isNotNull()
