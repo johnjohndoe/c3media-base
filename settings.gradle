@@ -1,3 +1,3 @@
 rootProject.name = 'c3media-base'
 
-include ':base'
+include ':base', ':rx-java-2'
