@@ -13,20 +13,21 @@ object ApiModule {
     ): C3MediaService = createRetrofit(baseUrl, okHttpClient)
             .create(C3MediaService::class.java)
 
-
-    private fun createRetrofit(baseUrl: String,
-                               okHttpClient: OkHttpClient): Retrofit {
-        val moshi = Moshi.Builder()
+    fun provideMoshiBuilder(): Moshi {
+        return Moshi.Builder()
                 .add(OffsetDateTimeAdapter())
                 .add(LocalDateAdapter())
                 .add(LanguageAdapter())
                 .add(AspectRatioAdapter())
                 .add(MimeTypeAdapter())
                 .build()
+    }
 
+    private fun createRetrofit(baseUrl: String,
+                               okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
                 .baseUrl(baseUrl)
-                .addConverterFactory(MoshiConverterFactory.create(moshi))
+                .addConverterFactory(MoshiConverterFactory.create(provideMoshiBuilder()))
                 .client(okHttpClient)
                 .build()
     }

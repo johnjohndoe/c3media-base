@@ -1,0 +1,18 @@
+apply plugin: "java-library"
+apply plugin: "kotlin"
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    compile project(':base')
+
+    compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+    testCompile "junit:junit:$junitVersion"
+    testCompile "org.assertj:assertj-core:$assertjVersion"
+}
+
+apply from: rootProject.file('gradle/deploy.gradle')
