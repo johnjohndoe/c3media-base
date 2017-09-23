@@ -51,6 +51,9 @@ Run the following command to execute all tests:
 $ ./gradlew clean test
 ```
 
+## Which applications are using this library?
+
+* cccTV - [Sources][ccctv-github], [Google Play][ccctv-play]
 
 ## Author
 
@@ -77,6 +80,8 @@ $ ./gradlew clean test
     limitations under the License.
 
 
+[ccctv-github]: https://github.com/stefanmedack/cccTV
+[ccctv-play]: https://play.google.com/store/apps/details?id=de.stefanmedack.ccctv
 [stefan-medack]: https://github.com/stefanmedack
 [tobias-preuss]: https://github.com/johnjohndoe
 [jitpack-c3media-base]: https://jitpack.io/#johnjohndoe/c3media-base
