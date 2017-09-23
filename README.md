@@ -56,6 +56,10 @@ $ ./gradlew clean test
 
 * [Tobias Preuss][tobias-preuss]
 
+## Contributors
+
+* [Stefan Medack][stefan-medack]
+
 ## License
 
     Copyright 2017 Tobias Preuss
@@ -73,5 +77,6 @@ $ ./gradlew clean test
     limitations under the License.
 
 
+[stefan-medack]: https://github.com/stefanmedack
 [tobias-preuss]: https://github.com/johnjohndoe
 [jitpack-c3media-base]: https://jitpack.io/#johnjohndoe/c3media-base
