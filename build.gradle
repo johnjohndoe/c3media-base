@@ -6,7 +6,7 @@ buildscript {
         gradleVersioneyePluginVersion = "1.4.0"
         gradleVersionsPluginVersion = "0.15.0"
         junitVersion = "4.12"
-        kotlinVersion = "1.1.50"
+        kotlinVersion = "1.1.51"
         moshiVersion = "1.4.0"
         okhttpVersion = "3.8.1"
         retrofitVersion = "2.3.0"
