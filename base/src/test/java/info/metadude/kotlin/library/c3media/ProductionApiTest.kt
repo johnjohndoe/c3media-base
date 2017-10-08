@@ -169,7 +169,6 @@ class ProductionApiTest {
         assertThat(event.guid).isNotNull()
         // assertThat(event.posterFilename).isNotNull()
         // assertThat(event.conferenceId).isNotNull()
-        // assertThat(event.createdAt).isNotNull()
         assertThat(event.updatedAt).isNotNull()
         assertThat(event.title).isNotNull()
         // assertThat(event.thumbFilename).isNotNull()

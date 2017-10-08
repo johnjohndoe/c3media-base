@@ -10,8 +10,6 @@ data class Event(
         val conferenceId: Int? = null,
         @Json(name = "conference_url")
         val conferenceUrl: String? = null,
-        @Json(name = "created_at")
-        val createdAt: OffsetDateTime? = null,
         val date: OffsetDateTime? = null,
         val description: String? = null,
         @Json(name = "downloaded_recordings_count")
