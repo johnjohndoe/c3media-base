@@ -1,6 +1,7 @@
 package info.metadude.kotlin.library.c3media.models
 
 import com.squareup.moshi.Json
+import org.threeten.bp.LocalDate
 import org.threeten.bp.OffsetDateTime
 
 data class Conference(
@@ -21,6 +22,8 @@ data class Conference(
         val title: String? = null,
         @Json(name = "updated_at")
         val updatedAt: OffsetDateTime? = null,
+        @Json(name = "event_last_released_at")
+        val eventLastReleasedAt: LocalDate? = null,
         val url: String? = null,
         @Json(name = "webgen_location")
         val webgenLocation: String? = null
