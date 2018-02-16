@@ -38,7 +38,7 @@ class ProductionApiTest {
             } else {
                 fail("getConferences() response is not successful.")
             }
-        } catch(e: IOException) {
+        } catch (e: IOException) {
             fail("Should not throw {$e}")
         }
     }
@@ -140,7 +140,7 @@ class ProductionApiTest {
             } else {
                 fail("getEvents() response is not successful.")
             }
-        } catch(e: IOException) {
+        } catch (e: IOException) {
             fail("Should not throw {$e}")
         }
     }
@@ -159,7 +159,7 @@ class ProductionApiTest {
             } else {
                 fail("getEvents() response is not successful.")
             }
-        } catch(e: IOException) {
+        } catch (e: IOException) {
             fail("Should not throw {$e}")
         }
     }
@@ -284,7 +284,7 @@ class ProductionApiTest {
             } else {
                 fail("getRecordings() response is not successful.")
             }
-        } catch(e: IOException) {
+        } catch (e: IOException) {
             fail("Should not throw {$e}")
         }
     }
