@@ -190,7 +190,7 @@ class ProductionApiTest {
     }
 
     private fun assertListEventNestedMetadata(metadata: Metadata) {
-        // assertThat(metadata.related).isNotNull
+        assertThat(metadata.related).isNotNull
         // assertThat(metadata.remoteId).isNotNull()
     }
 
