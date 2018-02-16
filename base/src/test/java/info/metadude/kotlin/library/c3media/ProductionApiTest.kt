@@ -43,19 +43,19 @@ class ProductionApiTest {
         }
     }
 
-    private fun assertListConference(conference: Conference) {
-        assertThat(conference.acronym).isNotNull()
-        // assertThat(conference.aspectRatio).isNotNull()
+    private fun assertListConference(conference: Conference) = with(conference) {
+        assertThat(acronym).isNotNull()
+        // assertThat(aspectRatio).isNotNull()
         //        .isNotEqualTo(AspectRatio.UNKNOWN)
-        assertThat(conference.updatedAt).isNotNull()
-        assertThat(conference.title).isNotNull()
-        // assertThat(conference.scheduleUrl).isNotNull()
-        assertThat(conference.slug).isNotNull()
-        assertThat(conference.webgenLocation).isNotNull()
-        assertThat(conference.logoUrl).isNotNull()
-        assertThat(conference.imagesUrl).isNotNull()
-        assertThat(conference.recordingsUrl).isNotNull()
-        assertThat(conference.url).isNotNull()
+        assertThat(updatedAt).isNotNull()
+        assertThat(title).isNotNull()
+        // assertThat(scheduleUrl).isNotNull()
+        assertThat(slug).isNotNull()
+        assertThat(webgenLocation).isNotNull()
+        assertThat(logoUrl).isNotNull()
+        assertThat(imagesUrl).isNotNull()
+        assertThat(recordingsUrl).isNotNull()
+        assertThat(url).isNotNull()
     }
 
     @Test
@@ -75,44 +75,44 @@ class ProductionApiTest {
         }
     }
 
-    private fun assertConference(conference: Conference) {
-        assertThat(conference.acronym).isNotNull()
-        assertThat(conference.aspectRatio).isNotNull()
+    private fun assertConference(conference: Conference) = with(conference) {
+        assertThat(acronym).isNotNull()
+        assertThat(aspectRatio).isNotNull()
                 .isNotEqualTo(AspectRatio.UNKNOWN)
-        assertThat(conference.updatedAt).isNotNull()
-        assertThat(conference.title).isNotNull()
+        assertThat(updatedAt).isNotNull()
+        assertThat(title).isNotNull()
         // conference.scheduleUrl can be null
-        assertThat(conference.slug).isNotNull()
-        assertThat(conference.webgenLocation).isNotNull()
-        assertThat(conference.logoUrl).isNotNull()
-        assertThat(conference.imagesUrl).isNotNull()
-        assertThat(conference.recordingsUrl).isNotNull()
-        assertThat(conference.url).isNotNull()
-        assertThat(conference.events).isNotNull
-        conference.events?.let {
+        assertThat(slug).isNotNull()
+        assertThat(webgenLocation).isNotNull()
+        assertThat(logoUrl).isNotNull()
+        assertThat(imagesUrl).isNotNull()
+        assertThat(recordingsUrl).isNotNull()
+        assertThat(url).isNotNull()
+        assertThat(events).isNotNull
+        events?.let {
             it.filterNotNull().forEach { assertConferenceNestedEvent(it) }
         }
     }
 
-    private fun assertConferenceNestedEvent(event: Event) {
-        assertThat(event.guid).isNotNull()
-        assertThat(event.title).isNotNull()
-        // assertThat(event.subtitle).isNotNull()
-        assertThat(event.slug).isNotNull()
-        // assertThat(event.link).isNotNull()
-        // assertThat(event.description).isNotNull()
-        assertOriginalLanguage(event.originalLanguage)
-        assertThat(event.persons).isNotNull
-        assertThat(event.tags).isNotNull
-        // assertThat(event.date).isNotNull()
-        assertThat(event.releaseDate).isNotNull()
-        assertThat(event.updatedAt).isNotNull()
-        assertThat(event.length).isNotNull()
-        assertThat(event.thumbUrl).isNotNull()
-        assertThat(event.posterUrl).isNotNull()
-        assertThat(event.frontendLink).isNotNull()
-        assertThat(event.url).isNotNull()
-        assertThat(event.conferenceUrl).isNotNull()
+    private fun assertConferenceNestedEvent(event: Event) = with(event) {
+        assertThat(guid).isNotNull()
+        assertThat(title).isNotNull()
+        // assertThat(subtitle).isNotNull()
+        assertThat(slug).isNotNull()
+        // assertThat(link).isNotNull()
+        // assertThat(description).isNotNull()
+        assertOriginalLanguage(originalLanguage)
+        assertThat(persons).isNotNull
+        assertThat(tags).isNotNull
+        // assertThat(date).isNotNull()
+        assertThat(releaseDate).isNotNull()
+        assertThat(updatedAt).isNotNull()
+        assertThat(length).isNotNull()
+        assertThat(thumbUrl).isNotNull()
+        assertThat(posterUrl).isNotNull()
+        assertThat(frontendLink).isNotNull()
+        assertThat(url).isNotNull()
+        assertThat(conferenceUrl).isNotNull()
     }
 
     @Test
@@ -164,34 +164,34 @@ class ProductionApiTest {
         }
     }
 
-    private fun assertListEvent(event: Event) {
-        // assertThat(event.id).isNotNull()
-        assertThat(event.guid).isNotNull()
-        // assertThat(event.posterFilename).isNotNull()
-        // assertThat(event.conferenceId).isNotNull()
-        assertThat(event.updatedAt).isNotNull()
-        assertThat(event.title).isNotNull()
-        // assertThat(event.thumbFilename).isNotNull()
-        // assertThat(event.date).isNotNull()
-        // assertThat(event.description).isNotNull()
-        // assertThat(event.link).isNotNull()
-        assertThat(event.persons).isNotNull
-        assertThat(event.slug).isNotNull()
-        // assertThat(event.subtitle).isNotNull()
-        assertThat(event.tags).isNotNull
-        assertThat(event.releaseDate).isNotNull()
-        assertThat(event.promoted).isNotNull()
-        assertThat(event.viewCount).isNotNull()
-        assertThat(event.duration).isNotNull()
-        // assertThat(event.downloadedRecordingsCount).isNotNull()
-        assertOriginalLanguage(event.originalLanguage)
-        assertThat(event.metadata).isNotNull()
-        assertListEventNestedMetadata(event.metadata!!)
+    private fun assertListEvent(event: Event) = with(event) {
+        // assertThat(id).isNotNull()
+        assertThat(guid).isNotNull()
+        // assertThat(posterFilename).isNotNull()
+        // assertThat(conferenceId).isNotNull()
+        assertThat(updatedAt).isNotNull()
+        assertThat(title).isNotNull()
+        // assertThat(thumbFilename).isNotNull()
+        // assertThat(date).isNotNull()
+        // assertThat(description).isNotNull()
+        // assertThat(link).isNotNull()
+        assertThat(persons).isNotNull
+        assertThat(slug).isNotNull()
+        // assertThat(subtitle).isNotNull()
+        assertThat(tags).isNotNull
+        assertThat(releaseDate).isNotNull()
+        assertThat(promoted).isNotNull()
+        assertThat(viewCount).isNotNull()
+        assertThat(duration).isNotNull()
+        // assertThat(downloadedRecordingsCount).isNotNull()
+        assertOriginalLanguage(originalLanguage)
+        assertThat(metadata).isNotNull()
+        assertListEventNestedMetadata(metadata!!)
     }
 
-    private fun assertListEventNestedMetadata(metadata: Metadata) {
-        assertThat(metadata.related).isNotNull
-        // assertThat(metadata.remoteId).isNotNull()
+    private fun assertListEventNestedMetadata(metadata: Metadata) = with(metadata) {
+        assertThat(related).isNotNull
+        // assertThat(remoteId).isNotNull()
     }
 
     @Test
@@ -211,52 +211,52 @@ class ProductionApiTest {
         }
     }
 
-    private fun assertEvent(event: Event) {
-        assertThat(event.guid).isNotNull()
-        assertThat(event.title).isNotNull()
-        // assertThat(event.subtitle).isNotNull()
-        assertThat(event.slug).isNotNull()
-        // assertThat(event.link).isNotNull()
-        // assertThat(event.description).isNotNull()
-        assertOriginalLanguage(event.originalLanguage)
-        assertThat(event.persons).isNotNull
-        assertThat(event.tags).isNotNull
-        // assertThat(event.date).isNotNull()
-        assertThat(event.releaseDate).isNotNull()
-        assertThat(event.updatedAt).isNotNull()
-        assertThat(event.length).isNotNull()
-        assertThat(event.thumbUrl).isNotNull()
-        assertThat(event.posterUrl).isNotNull()
-        assertThat(event.frontendLink).isNotNull()
-        assertThat(event.url).isNotNull()
-        assertThat(event.conferenceUrl).isNotNull()
-        // assertThat(event.recordings).isNotNull
-        event.recordings?.let {
+    private fun assertEvent(event: Event) = with(event) {
+        assertThat(guid).isNotNull()
+        assertThat(title).isNotNull()
+        // assertThat(subtitle).isNotNull()
+        assertThat(slug).isNotNull()
+        // assertThat(link).isNotNull()
+        // assertThat(description).isNotNull()
+        assertOriginalLanguage(originalLanguage)
+        assertThat(persons).isNotNull
+        assertThat(tags).isNotNull
+        // assertThat(date).isNotNull()
+        assertThat(releaseDate).isNotNull()
+        assertThat(updatedAt).isNotNull()
+        assertThat(length).isNotNull()
+        assertThat(thumbUrl).isNotNull()
+        assertThat(posterUrl).isNotNull()
+        assertThat(frontendLink).isNotNull()
+        assertThat(url).isNotNull()
+        assertThat(conferenceUrl).isNotNull()
+        // assertThat(recordings).isNotNull
+        recordings?.let {
             it.filterNotNull().forEach {
                 assertEventNestedRecording(it)
             }
         }
     }
 
-    private fun assertEventNestedRecording(recording: Recording) {
-        assertThat(recording.size).isNotNull()
-        assertThat(recording.length).isNotNull()
-        assertThat(recording.mimeType).isNotNull()
-        assertThat(recording.language)
+    private fun assertEventNestedRecording(recording: Recording) = with(recording) {
+        assertThat(size).isNotNull()
+        assertThat(length).isNotNull()
+        assertThat(mimeType).isNotNull()
+        assertThat(language)
                 .isNotNull
                 .isNotEmpty
                 .doesNotContain(Language.UNKNOWN)
-        assertThat(recording.filename).isNotNull()
-        assertThat(recording.state).isNotNull()
-        assertThat(recording.folder).isNotNull()
-        assertThat(recording.highQuality).isNotNull()
-        assertThat(recording.width).isNotNull()
-        assertThat(recording.height).isNotNull()
-        assertThat(recording.updatedAt).isNotNull()
-        assertThat(recording.recordingUrl).isNotNull()
-        assertThat(recording.url).isNotNull()
-        assertThat(recording.eventUrl).isNotNull()
-        assertThat(recording.conferenceUrl).isNotNull()
+        assertThat(filename).isNotNull()
+        assertThat(state).isNotNull()
+        assertThat(folder).isNotNull()
+        assertThat(highQuality).isNotNull()
+        assertThat(width).isNotNull()
+        assertThat(height).isNotNull()
+        assertThat(updatedAt).isNotNull()
+        assertThat(recordingUrl).isNotNull()
+        assertThat(url).isNotNull()
+        assertThat(eventUrl).isNotNull()
+        assertThat(conferenceUrl).isNotNull()
     }
 
     @Test
@@ -289,26 +289,26 @@ class ProductionApiTest {
         }
     }
 
-    private fun assertBaseRecording(recording: Recording) {
-        // assertThat(recording.id).isNotNull()
-        assertThat(recording.size).isNotNull()
-        assertThat(recording.length).isNotNull()
-        assertThat(recording.mimeType).isNotNull()
+    private fun assertBaseRecording(recording: Recording) = with(recording) {
+        // assertThat(id).isNotNull()
+        assertThat(size).isNotNull()
+        assertThat(length).isNotNull()
+        assertThat(mimeType).isNotNull()
                 .isNotEqualTo(MimeType.UNKNOWN)
-        assertThat(recording.eventId).isNotNull()
-        // assertThat(recording.createdAt).isNotNull()
-        assertThat(recording.updatedAt).isNotNull()
-        assertThat(recording.filename).isNotNull()
-        assertThat(recording.state).isNotNull()
-        assertThat(recording.folder).isNotNull()
-        // assertThat(recording.width).isNotNull()
-        // assertThat(recording.height).isNotNull()
-        assertThat(recording.language)
+        assertThat(eventId).isNotNull()
+        // assertThat(createdAt).isNotNull()
+        assertThat(updatedAt).isNotNull()
+        assertThat(filename).isNotNull()
+        assertThat(state).isNotNull()
+        assertThat(folder).isNotNull()
+        // assertThat(width).isNotNull()
+        // assertThat(height).isNotNull()
+        assertThat(language)
                 .isNotNull
                 .isNotEmpty
                 .doesNotContain(Language.UNKNOWN)
-        assertThat(recording.highQuality).isNotNull()
-        assertThat(recording.html5).isNotNull()
+        assertThat(highQuality).isNotNull()
+        assertThat(html5).isNotNull()
     }
 
     @Test
@@ -328,26 +328,26 @@ class ProductionApiTest {
         }
     }
 
-    private fun assertSingleRecording(recording: Recording) {
-        // assertThat(recording.size).isNotNull()
-        assertThat(recording.length).isNotNull()
-        assertThat(recording.mimeType).isNotNull()
+    private fun assertSingleRecording(recording: Recording) = with(recording) {
+        // assertThat(size).isNotNull()
+        assertThat(length).isNotNull()
+        assertThat(mimeType).isNotNull()
                 .isNotEqualTo(MimeType.UNKNOWN)
-        assertThat(recording.language)
+        assertThat(language)
                 .isNotNull
                 .isNotEmpty
                 .doesNotContain(Language.UNKNOWN)
-        assertThat(recording.filename).isNotNull()
-        assertThat(recording.state).isNotNull()
-        assertThat(recording.folder).isNotNull()
-        assertThat(recording.highQuality).isNotNull()
-        assertThat(recording.width).isNotNull()
-        assertThat(recording.height).isNotNull()
-        assertThat(recording.updatedAt).isNotNull()
-        assertThat(recording.recordingUrl).isNotNull()
-        assertThat(recording.url).isNotNull()
-        assertThat(recording.eventUrl).isNotNull()
-        assertThat(recording.conferenceUrl).isNotNull()
+        assertThat(filename).isNotNull()
+        assertThat(state).isNotNull()
+        assertThat(folder).isNotNull()
+        assertThat(highQuality).isNotNull()
+        assertThat(width).isNotNull()
+        assertThat(height).isNotNull()
+        assertThat(updatedAt).isNotNull()
+        assertThat(recordingUrl).isNotNull()
+        assertThat(url).isNotNull()
+        assertThat(eventUrl).isNotNull()
+        assertThat(conferenceUrl).isNotNull()
     }
 
     @Test
