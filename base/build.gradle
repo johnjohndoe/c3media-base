@@ -1,5 +1,4 @@
 apply plugin: "java-library"
-apply plugin: "com.github.ben-manes.versions"
 apply plugin: "org.standardout.versioneye"
 apply plugin: "kotlin"
 
