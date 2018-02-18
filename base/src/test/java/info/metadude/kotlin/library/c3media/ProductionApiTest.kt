@@ -48,6 +48,8 @@ class ProductionApiTest {
         // assertThat(aspectRatio).isNotNull()
         //        .isNotEqualTo(AspectRatio.UNKNOWN)
         assertThat(updatedAt).isNotNull()
+        // Currently three conferences return "eventLastReleasedAt": null.
+        // assertThat(eventLastReleasedAt).isNotNull()
         assertThat(title).isNotNull()
         // assertThat(scheduleUrl).isNotNull()
         assertThat(slug).isNotNull()
@@ -80,6 +82,7 @@ class ProductionApiTest {
         assertThat(aspectRatio).isNotNull()
                 .isNotEqualTo(AspectRatio.UNKNOWN)
         assertThat(updatedAt).isNotNull()
+        assertThat(eventLastReleasedAt).isNotNull()
         assertThat(title).isNotNull()
         // conference.scheduleUrl can be null
         assertThat(slug).isNotNull()
