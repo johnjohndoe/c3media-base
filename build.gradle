@@ -3,7 +3,7 @@ apply plugin: "com.github.ben-manes.versions"
 buildscript {
 
     ext {
-        assertjVersion = "3.8.0"
+        assertjVersion = "3.9.1"
         gradleBintrayPluginVersion = "1.8.0"
         gradleVersionsPluginVersion = "0.17.0"
         junitVersion = "4.12"
