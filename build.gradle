@@ -5,7 +5,6 @@ buildscript {
     ext {
         assertjVersion = "3.8.0"
         gradleBintrayPluginVersion = "1.8.0"
-        gradleVersioneyePluginVersion = "1.5.0"
         gradleVersionsPluginVersion = "0.17.0"
         junitVersion = "4.12"
         kotlinVersion = "1.2.21"
@@ -22,7 +21,6 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath "com.github.ben-manes:gradle-versions-plugin:$gradleVersionsPluginVersion"
-        classpath "org.standardout:gradle-versioneye-plugin:$gradleVersioneyePluginVersion"
         classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:$gradleBintrayPluginVersion"
     }
 }

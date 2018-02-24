@@ -1,5 +1,4 @@
 apply plugin: "java-library"
-apply plugin: "org.standardout.versioneye"
 apply plugin: "kotlin"
 
 compileJava {
@@ -18,10 +17,6 @@ dependencies {
 
     testCompile "junit:junit:$junitVersion"
     testCompile "org.assertj:assertj-core:$assertjVersion"
-}
-
-versioneye {
-    exclude project.configurations.findAll { !it.canBeResolved }*.name as String[]
 }
 
 tasks.matching { it instanceof Test }.all {
