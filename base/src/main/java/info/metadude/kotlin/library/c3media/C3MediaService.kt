@@ -14,6 +14,9 @@ interface C3MediaService {
     @GET("public/conferences/{conferenceId}")
     fun getConference(@Path("conferenceId") conferenceId: Int): Call<Conference>
 
+    @GET("public/conferences/{acronym}")
+    fun getConference(@Path("acronym") acronym: String): Call<Conference>
+
     @GET("public/events")
     fun getEvents(): Call<EventsResponse>
 
@@ -22,6 +25,9 @@ interface C3MediaService {
 
     @GET("public/events/{eventId}")
     fun getEvent(@Path("eventId") eventId: Int): Call<Event>
+
+    @GET("public/events/{guid}")
+    fun getEvent(@Path("guid") guid: String): Call<Event>
 
     @GET("public/recordings")
     fun getRecordings(): Call<RecordingsResponse>
