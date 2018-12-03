@@ -1,12 +1,6 @@
 package info.metadude.kotlin.library.c3media
 
-import info.metadude.kotlin.library.c3media.models.AspectRatio
-import info.metadude.kotlin.library.c3media.models.Conference
-import info.metadude.kotlin.library.c3media.models.Event
-import info.metadude.kotlin.library.c3media.models.Language
-import info.metadude.kotlin.library.c3media.models.MimeType
-import info.metadude.kotlin.library.c3media.models.Recording
-import info.metadude.kotlin.library.c3media.models.RelatedEvent
+import info.metadude.kotlin.library.c3media.models.*
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.assertj.core.api.Assertions.assertThat
