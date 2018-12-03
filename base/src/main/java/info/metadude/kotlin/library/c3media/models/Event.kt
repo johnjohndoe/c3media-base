@@ -21,7 +21,6 @@ data class Event(
         val id: Int? = null,
         val length: Int? = null,
         val link: String? = null,
-        val metadata: Metadata? = null,
         @Json(name = "original_language")
         val originalLanguage: List<Language>,
         val persons: List<String?>? = null,
@@ -30,9 +29,10 @@ data class Event(
         @Json(name = "poster_url")
         val posterUrl: String? = null,
         val promoted: Boolean? = null,
+        val recordings: List<Recording>? = null,
+        val related: List<RelatedEvent>? = null,
         @Json(name = "release_date")
         val releaseDate: LocalDate,
-        val recordings: List<Recording>? = null,
         val slug: String,
         val subtitle: String? = null,
         val tags: List<String?>? = null,
