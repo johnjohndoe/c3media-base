@@ -71,7 +71,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val conference = response.body()
-                assertThat(conference!!).isNotNull()
+                assertThat(conference!!).isNotNull
                 assertConference(conference)
             } else {
                 fail("getConference() response is not successful.")
@@ -100,7 +100,7 @@ class ProductionApiTest {
 
     private fun assertConference(conference: Conference) = with(conference) {
         assertThat(acronym).isNotNull()
-        assertThat(aspectRatio).isNotNull()
+        assertThat(aspectRatio).isNotNull
                 .isNotEqualTo(AspectRatio.UNKNOWN)
         assertThat(updatedAt).isNotNull()
         assertThat(eventLastReleasedAt).isNotNull()
@@ -226,7 +226,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val event = response.body()
-                assertThat(event).isNotNull()
+                assertThat(event).isNotNull
                 assertEvent(event!!)
             } else {
                 fail("getEvent() response is not successful.")
@@ -283,7 +283,7 @@ class ProductionApiTest {
     private fun assertEventNestedRecording(recording: Recording) = with(recording) {
         assertThat(size).isNotNull()
         assertThat(length).isNotNull()
-        assertThat(mimeType).isNotNull()
+        assertThat(mimeType).isNotNull
         assertThat(language)
                 .isNotNull
                 .isNotEmpty
@@ -335,7 +335,7 @@ class ProductionApiTest {
         // assertThat(id).isNotNull()
         assertThat(size).isNotNull()
         assertThat(length).isNotNull()
-        assertThat(mimeType).isNotNull()
+        assertThat(mimeType).isNotNull
                 .isNotEqualTo(MimeType.UNKNOWN)
         assertThat(eventId).isNotNull()
         // assertThat(createdAt).isNotNull()
@@ -360,7 +360,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val recording = response.body()
-                assertThat(recording!!).isNotNull()
+                assertThat(recording!!).isNotNull
                 assertSingleRecording(recording)
             } else {
                 fail("getRecording() response is not successful.")
@@ -373,7 +373,7 @@ class ProductionApiTest {
     private fun assertSingleRecording(recording: Recording) = with(recording) {
         // assertThat(size).isNotNull()
         assertThat(length).isNotNull()
-        assertThat(mimeType).isNotNull()
+        assertThat(mimeType).isNotNull
                 .isNotEqualTo(MimeType.UNKNOWN)
         assertThat(language)
                 .isNotNull
