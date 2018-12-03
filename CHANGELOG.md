@@ -1,5 +1,19 @@
 # c3media-base changelog
 
+## [v.2.0.0](https://github.com/johnjohndoe/c3media-base/releases/tag/v.2.0.0)
+
+* Published: 2018-12-03
+
+### Changes
+
+* Update library for breaking API change. Thanks to [Stefan Medack][stefan-medack].
+* Add new endpoints for loading conference via `acronym` and events via `guid`. Thanks to [Stefan Medack][stefan-medack].
+* Add new `related` field to `Event` model. Thanks to [Stefan Medack][stefan-medack].
+* Remove `metadata` field from `Event` model. Thanks to [Stefan Medack][stefan-medack].
+* Clean up project (mostly Lint warnings and formatting).
+* Update project setup and dependencies (sticking to Kotlin 1.2.71 to ease stepwise migration).
+
+
 ## [v.1.1.0](https://github.com/johnjohndoe/c3media-base/releases/tag/v.1.1.0)
 
 * Published: 2018-02-24
