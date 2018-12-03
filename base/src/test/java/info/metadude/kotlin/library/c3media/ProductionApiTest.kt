@@ -14,19 +14,22 @@ import java.io.IOException
 @RunWith(JUnit4::class)
 class ProductionApiTest {
 
-    private val BASE_URL = "https://api.media.ccc.de"
+    companion object {
+        private const val BASE_URL = "https://api.media.ccc.de"
 
-    private val VALID_CONFERENCE_ID = 73
-    private val VALID_CONFERENCE_ACRONYM = "34c3"
+        private const val VALID_CONFERENCE_ID = 73
+        private const val VALID_CONFERENCE_ACRONYM = "34c3"
 
-    private val VALID_EVENT_ID = 3763
-    private val VALID_EVENT_GUID = "4cb7be14-bfbd-42a2-a556-9ef8e8bd6ba7"
+        private const val VALID_EVENT_ID = 3763
+        private const val VALID_EVENT_GUID = "4cb7be14-bfbd-42a2-a556-9ef8e8bd6ba7"
 
-    private val VALID_RECORDING_ID = 9967
+        private const val VALID_RECORDING_ID = 9967
 
-    private val INVALID_CONFERENCE_ID = Int.MAX_VALUE
-    private val INVALID_EVENT_ID = Int.MAX_VALUE
-    private val INVALID_RECORDING_ID = Int.MAX_VALUE
+        private const val INVALID_CONFERENCE_ID = Int.MAX_VALUE
+        private const val INVALID_EVENT_ID = Int.MAX_VALUE
+        private const val INVALID_RECORDING_ID = Int.MAX_VALUE
+    }
+
 
     @Test
     fun `Validates a conferences response`() {

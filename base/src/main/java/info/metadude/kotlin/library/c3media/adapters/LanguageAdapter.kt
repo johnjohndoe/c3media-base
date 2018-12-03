@@ -11,7 +11,9 @@ import info.metadude.kotlin.library.c3media.models.Language
  */
 class LanguageAdapter {
 
-    private val LANGUAGES_SEPARATOR = "-"
+    companion object {
+        private const val LANGUAGES_SEPARATOR = "-"
+    }
 
     @FromJson
     fun fromJson(text: String?): List<Language> {
