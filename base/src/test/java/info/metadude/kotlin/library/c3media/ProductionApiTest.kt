@@ -276,10 +276,8 @@ class ProductionApiTest {
         assertThat(url).isNotNull()
         assertThat(conferenceUrl).isNotNull()
         // assertThat(recordings).isNotNull
-        recordings?.let {
-            it.filterNotNull().forEach {
-                assertEventNestedRecording(it)
-            }
+        recordings?.forEach {
+            assertEventNestedRecording(it)
         }
     }
 
