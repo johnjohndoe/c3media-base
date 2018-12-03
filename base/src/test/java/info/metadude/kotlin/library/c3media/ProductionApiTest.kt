@@ -226,8 +226,8 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val event = response.body()
-                assertThat(event!!).isNotNull()
-                assertEvent(event)
+                assertThat(event).isNotNull()
+                assertEvent(event!!)
             } else {
                 fail("getEvent() response is not successful.")
             }
