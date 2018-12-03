@@ -39,8 +39,8 @@ class ProductionApiTest {
             if (response.isSuccessful) {
                 val conferencesResponse = response.body()
                 assertThat(conferencesResponse!!.conferences).isNotNull
-                conferencesResponse.conferences?.let {
-                    it.filterNotNull().forEach { assertListConference(it) }
+                conferencesResponse.conferences?.let { conferences ->
+                    conferences.filterNotNull().forEach { assertListConference(it) }
                 }
             } else {
                 fail("getConferences() response is not successful.")
@@ -116,8 +116,8 @@ class ProductionApiTest {
         assertThat(recordingsUrl).isNotNull()
         assertThat(url).isNotNull()
         assertThat(events).isNotNull
-        events?.let {
-            it.filterNotNull().forEach { assertConferenceNestedEvent(it) }
+        events?.let { events ->
+            events.filterNotNull().forEach { assertConferenceNestedEvent(it) }
         }
     }
 
