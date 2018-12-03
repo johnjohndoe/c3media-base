@@ -37,8 +37,7 @@ class LanguageAdapter {
         } else if (languages.size == 1) {
             Language.toFrabCode(languages[0])
         } else {
-            languages.map { it.frabCode }
-                    .joinToString(LANGUAGES_SEPARATOR)
+            languages.joinToString(LANGUAGES_SEPARATOR) { it.frabCode }
         }
     }
 
