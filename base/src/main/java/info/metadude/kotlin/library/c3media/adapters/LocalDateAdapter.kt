@@ -15,7 +15,7 @@ class LocalDateAdapter {
     fun fromJson(text: String?) = text?.let {
         try {
             LocalDate.parse(text, dateFormatter)
-        } catch(e: DateTimeParseException) {
+        } catch (e: DateTimeParseException) {
             null
         }
     }

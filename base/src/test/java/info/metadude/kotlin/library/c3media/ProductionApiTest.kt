@@ -1,12 +1,6 @@
 package info.metadude.kotlin.library.c3media
 
-import info.metadude.kotlin.library.c3media.models.AspectRatio
-import info.metadude.kotlin.library.c3media.models.Conference
-import info.metadude.kotlin.library.c3media.models.Event
-import info.metadude.kotlin.library.c3media.models.Language
-import info.metadude.kotlin.library.c3media.models.MimeType
-import info.metadude.kotlin.library.c3media.models.Recording
-import info.metadude.kotlin.library.c3media.models.RelatedEvent
+import info.metadude.kotlin.library.c3media.models.*
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.assertj.core.api.Assertions.assertThat
@@ -20,19 +14,22 @@ import java.io.IOException
 @RunWith(JUnit4::class)
 class ProductionApiTest {
 
-    private val BASE_URL = "https://api.media.ccc.de"
+    companion object {
+        private const val BASE_URL = "https://api.media.ccc.de"
 
-    private val VALID_CONFERENCE_ID = 73
-    private val VALID_CONFERENCE_ACRONYM = "34c3"
+        private const val VALID_CONFERENCE_ID = 73
+        private const val VALID_CONFERENCE_ACRONYM = "34c3"
 
-    private val VALID_EVENT_ID = 3763
-    private val VALID_EVENT_GUID = "4cb7be14-bfbd-42a2-a556-9ef8e8bd6ba7"
+        private const val VALID_EVENT_ID = 3763
+        private const val VALID_EVENT_GUID = "4cb7be14-bfbd-42a2-a556-9ef8e8bd6ba7"
 
-    private val VALID_RECORDING_ID = 9967
+        private const val VALID_RECORDING_ID = 9967
 
-    private val INVALID_CONFERENCE_ID = Int.MAX_VALUE
-    private val INVALID_EVENT_ID = Int.MAX_VALUE
-    private val INVALID_RECORDING_ID = Int.MAX_VALUE
+        private const val INVALID_CONFERENCE_ID = Int.MAX_VALUE
+        private const val INVALID_EVENT_ID = Int.MAX_VALUE
+        private const val INVALID_RECORDING_ID = Int.MAX_VALUE
+    }
+
 
     @Test
     fun `Validates a conferences response`() {
@@ -42,8 +39,8 @@ class ProductionApiTest {
             if (response.isSuccessful) {
                 val conferencesResponse = response.body()
                 assertThat(conferencesResponse!!.conferences).isNotNull
-                conferencesResponse.conferences?.let {
-                    it.filterNotNull().forEach { assertListConference(it) }
+                conferencesResponse.conferences?.let { conferences ->
+                    conferences.filterNotNull().forEach { assertListConference(it) }
                 }
             } else {
                 fail("getConferences() response is not successful.")
@@ -77,7 +74,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val conference = response.body()
-                assertThat(conference!!).isNotNull()
+                assertThat(conference!!).isNotNull
                 assertConference(conference)
             } else {
                 fail("getConference() response is not successful.")
@@ -106,7 +103,7 @@ class ProductionApiTest {
 
     private fun assertConference(conference: Conference) = with(conference) {
         assertThat(acronym).isNotNull()
-        assertThat(aspectRatio).isNotNull()
+        assertThat(aspectRatio).isNotNull
                 .isNotEqualTo(AspectRatio.UNKNOWN)
         assertThat(updatedAt).isNotNull()
         assertThat(eventLastReleasedAt).isNotNull()
@@ -119,8 +116,8 @@ class ProductionApiTest {
         assertThat(recordingsUrl).isNotNull()
         assertThat(url).isNotNull()
         assertThat(events).isNotNull
-        events?.let {
-            it.filterNotNull().forEach { assertConferenceNestedEvent(it) }
+        events?.let { events ->
+            events.filterNotNull().forEach { assertConferenceNestedEvent(it) }
         }
     }
 
@@ -232,8 +229,8 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val event = response.body()
-                assertThat(event!!).isNotNull()
-                assertEvent(event)
+                assertThat(event).isNotNull
+                assertEvent(event!!)
             } else {
                 fail("getEvent() response is not successful.")
             }
@@ -279,17 +276,15 @@ class ProductionApiTest {
         assertThat(url).isNotNull()
         assertThat(conferenceUrl).isNotNull()
         // assertThat(recordings).isNotNull
-        recordings?.let {
-            it.filterNotNull().forEach {
-                assertEventNestedRecording(it)
-            }
+        recordings?.forEach {
+            assertEventNestedRecording(it)
         }
     }
 
     private fun assertEventNestedRecording(recording: Recording) = with(recording) {
         assertThat(size).isNotNull()
         assertThat(length).isNotNull()
-        assertThat(mimeType).isNotNull()
+        assertThat(mimeType).isNotNull
         assertThat(language)
                 .isNotNull
                 .isNotEmpty
@@ -341,7 +336,7 @@ class ProductionApiTest {
         // assertThat(id).isNotNull()
         assertThat(size).isNotNull()
         assertThat(length).isNotNull()
-        assertThat(mimeType).isNotNull()
+        assertThat(mimeType).isNotNull
                 .isNotEqualTo(MimeType.UNKNOWN)
         assertThat(eventId).isNotNull()
         // assertThat(createdAt).isNotNull()
@@ -366,7 +361,7 @@ class ProductionApiTest {
             val response = call.execute()
             if (response.isSuccessful) {
                 val recording = response.body()
-                assertThat(recording!!).isNotNull()
+                assertThat(recording!!).isNotNull
                 assertSingleRecording(recording)
             } else {
                 fail("getRecording() response is not successful.")
@@ -379,7 +374,7 @@ class ProductionApiTest {
     private fun assertSingleRecording(recording: Recording) = with(recording) {
         // assertThat(size).isNotNull()
         assertThat(length).isNotNull()
-        assertThat(mimeType).isNotNull()
+        assertThat(mimeType).isNotNull
                 .isNotEqualTo(MimeType.UNKNOWN)
         assertThat(language)
                 .isNotNull

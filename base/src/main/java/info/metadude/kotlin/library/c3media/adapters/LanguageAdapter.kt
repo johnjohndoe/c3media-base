@@ -11,32 +11,33 @@ import info.metadude.kotlin.library.c3media.models.Language
  */
 class LanguageAdapter {
 
-    private val LANGUAGES_SEPARATOR = "-"
+    companion object {
+        private const val LANGUAGES_SEPARATOR = "-"
+    }
 
     @FromJson
     fun fromJson(text: String?): List<Language> {
         if (text == null) {
             return listOf(Language.UNKNOWN)
         }
-        if (text.contains(LANGUAGES_SEPARATOR)) {
-            return text.split(LANGUAGES_SEPARATOR)
+        return if (text.contains(LANGUAGES_SEPARATOR)) {
+            text.split(LANGUAGES_SEPARATOR)
                     .map { Language.toLanguage(it) }
                     .toList()
         } else {
             val language = Language.toLanguage(text)
-            return listOf(language)
+            listOf(language)
         }
     }
 
     @ToJson
     fun toJson(languages: List<Language>): String? {
-        if (languages.isEmpty() || languages.size < 0) {
-            return null
+        return if (languages.isEmpty() || languages.size < 0) {
+            null
         } else if (languages.size == 1) {
-            return Language.toFrabCode(languages[0])
+            Language.toFrabCode(languages[0])
         } else {
-            return languages.map { it.frabCode }
-                    .joinToString(LANGUAGES_SEPARATOR)
+            languages.joinToString(LANGUAGES_SEPARATOR) { it.frabCode }
         }
     }
 

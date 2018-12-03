@@ -15,7 +15,7 @@ class OffsetDateTimeAdapter {
     fun fromJson(text: String?) = text?.let {
         try {
             OffsetDateTime.parse(text, dateTimeFormatter)
-        } catch(e: DateTimeParseException) {
+        } catch (e: DateTimeParseException) {
             null
         }
     }
