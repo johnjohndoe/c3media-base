@@ -415,6 +415,7 @@ class ProductionApiTest {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.NONE
         val okHttpClient = OkHttpClient.Builder()
+                .addNetworkInterceptor(UserAgentInterceptor("c3media-base library; ${javaClass.simpleName}"))
                 .addNetworkInterceptor(interceptor)
                 .build()
         ApiModule.provideC3MediaService(BASE_URL, okHttpClient)
