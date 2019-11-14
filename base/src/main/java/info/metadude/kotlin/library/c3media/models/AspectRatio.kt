@@ -11,15 +11,15 @@ enum class AspectRatio(val text: String) {
     companion object {
 
         fun toAspectRatio(text: String?) = when (text) {
-            AspectRatio._16_X_9.text -> AspectRatio._16_X_9
-            AspectRatio._4_X_3.text -> AspectRatio._4_X_3
-            else -> AspectRatio.UNKNOWN
+            _16_X_9.text -> _16_X_9
+            _4_X_3.text -> _4_X_3
+            else -> UNKNOWN
         }
 
         fun toText(aspectRatio: AspectRatio) = when (aspectRatio) {
-            AspectRatio._16_X_9 -> AspectRatio._16_X_9.text
-            AspectRatio._4_X_3 -> AspectRatio._4_X_3.text
-            AspectRatio.UNKNOWN -> null
+            _16_X_9 -> _16_X_9.text
+            _4_X_3 -> _4_X_3.text
+            UNKNOWN -> null
         }
 
     }

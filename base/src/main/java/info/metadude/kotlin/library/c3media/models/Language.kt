@@ -30,26 +30,26 @@ enum class Language(
     companion object {
 
         fun toLanguage(frabCode: String) = when (frabCode) {
-            Language.ORIG.frabCode -> Language.ORIG
-            Language.DE.frabCode -> Language.DE
-            Language.DE_CH.frabCode -> Language.DE_CH
-            Language.EN.frabCode -> Language.EN
-            Language.ES.frabCode -> Language.ES
-            Language.FR.frabCode -> Language.FR
-            Language.JA.frabCode -> Language.JA
-            Language.RU.frabCode -> Language.RU
-            else -> Language.UNKNOWN
+            ORIG.frabCode -> ORIG
+            DE.frabCode -> DE
+            DE_CH.frabCode -> DE_CH
+            EN.frabCode -> EN
+            ES.frabCode -> ES
+            FR.frabCode -> FR
+            JA.frabCode -> JA
+            RU.frabCode -> RU
+            else -> UNKNOWN
         }
 
         fun toFrabCode(language: Language) = when (language) {
-            Language.ORIG -> Language.ORIG.frabCode
-            Language.DE -> Language.DE.frabCode
-            Language.DE_CH -> Language.DE_CH.frabCode
-            Language.EN -> Language.EN.frabCode
-            Language.ES -> Language.ES.frabCode
-            Language.FR -> Language.FR.frabCode
-            Language.JA -> Language.JA.frabCode
-            Language.RU -> Language.RU.frabCode
+            ORIG -> ORIG.frabCode
+            DE -> DE.frabCode
+            DE_CH -> DE_CH.frabCode
+            EN -> EN.frabCode
+            ES -> ES.frabCode
+            FR -> FR.frabCode
+            JA -> JA.frabCode
+            RU -> RU.frabCode
             else -> null
         }
 

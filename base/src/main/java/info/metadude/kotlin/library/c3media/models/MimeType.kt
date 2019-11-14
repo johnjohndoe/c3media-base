@@ -13,19 +13,19 @@ enum class MimeType(val text: String) {
     companion object {
 
         fun toMimeType(text: String?) = when (text) {
-            MimeType.MP3.text -> MimeType.MP3
-            MimeType.OPUS.text -> MimeType.OPUS
-            MimeType.MP4.text -> MimeType.MP4
-            MimeType.WEBM.text -> MimeType.WEBM
-            else -> MimeType.UNKNOWN
+            MP3.text -> MP3
+            OPUS.text -> OPUS
+            MP4.text -> MP4
+            WEBM.text -> WEBM
+            else -> UNKNOWN
         }
 
         fun toText(mimeType: MimeType) = when (mimeType) {
-            MimeType.MP3 -> MimeType.MP3.text
-            MimeType.OPUS -> MimeType.OPUS.text
-            MimeType.MP4 -> MimeType.MP4.text
-            MimeType.WEBM -> MimeType.WEBM.text
-            MimeType.UNKNOWN -> null
+            MP3 -> MP3.text
+            OPUS -> OPUS.text
+            MP4 -> MP4.text
+            WEBM -> WEBM.text
+            UNKNOWN -> null
         }
 
     }
