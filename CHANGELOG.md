@@ -9,7 +9,7 @@
 * Update `eventId` and `html5` fields in `Recording` class.
 * Update project setup and dependencies (using Kotlin 1.3.50).
 * Customize user agent to let the API identify requests made by the library.
- * Provide `UserAgentInterceptor` class to be used by client apps.
+  * Provide `UserAgentInterceptor` class to be used by client apps.
 
 
 ## [v.2.0.0](https://github.com/johnjohndoe/c3media-base/releases/tag/v.2.0.0)
