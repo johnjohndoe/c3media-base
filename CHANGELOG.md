@@ -1,5 +1,17 @@
 # c3media-base changelog
 
+## [v.3.0.0](https://github.com/johnjohndoe/c3media-base/releases/tag/v.3.0.0)
+
+* Published: 2019-11-15
+
+### Changes
+
+* Update `eventId` and `html5` fields in `Recording` class.
+* Update project setup and dependencies (using Kotlin 1.3.50).
+* Customize user agent to let the API identify requests made by the library.
+ * Provide `UserAgentInterceptor` class to be used by client apps.
+
+
 ## [v.2.0.0](https://github.com/johnjohndoe/c3media-base/releases/tag/v.2.0.0)
 
 * Published: 2018-12-03
