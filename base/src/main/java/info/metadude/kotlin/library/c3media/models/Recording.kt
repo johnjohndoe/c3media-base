@@ -9,7 +9,7 @@ data class Recording(
         @Json(name = "created_at")
         val createdAt: String? = null,
         @Json(name = "event_id")
-        val eventId: Int,
+        val eventId: Int? = null,
         @Json(name = "event_url")
         val eventUrl: String? = null,
         val filename: String? = null,
@@ -17,7 +17,7 @@ data class Recording(
         val height: Int? = null,
         @Json(name = "high_quality")
         val highQuality: Boolean,
-        val html5: Boolean,
+        val html5: Boolean? = null,
         val id: Int?,
         val length: Int? = null,
         val language: List<Language>? = null,
