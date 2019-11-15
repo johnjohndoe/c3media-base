@@ -338,7 +338,7 @@ class ProductionApiTest {
         assertThat(length).isNotNull()
         assertThat(mimeType).isNotNull
                 .isNotEqualTo(MimeType.UNKNOWN)
-        assertThat(eventId).isNotNull()
+        // assertThat(eventId).isNotNull()
         // assertThat(createdAt).isNotNull()
         assertThat(updatedAt).isNotNull()
         assertThat(filename).isNotNull()
@@ -351,7 +351,7 @@ class ProductionApiTest {
                 .isNotEmpty
                 .doesNotContain(Language.UNKNOWN)
         assertThat(highQuality).isNotNull()
-        assertThat(html5).isNotNull()
+        // assertThat(html5).isNotNull()
     }
 
     @Test
