@@ -10,7 +10,7 @@ buildscript {
         kotlinVersion = "1.3.50"
         moshiVersion = "1.7.0"
         okhttpVersion = "3.12.5"
-        retrofitVersion = "2.3.0"
+        retrofitVersion = "2.6.2"
         threetenbpVersion = "1.4.0"
     }
 
