@@ -6,12 +6,12 @@ buildscript {
         assertjVersion = "3.9.1"
         gradleBintrayPluginVersion = "1.8.4"
         gradleVersionsPluginVersion = "0.27.0"
-        junitVersion = "4.12"
-        kotlinVersion = "1.3.50"
-        moshiVersion = "1.8.0"
-        okhttpVersion = "3.12.5"
-        retrofitVersion = "2.6.2"
-        threetenbpVersion = "1.4.0"
+        junitVersion = "4.13"
+        kotlinVersion = "1.3.61"
+        moshiVersion = "1.9.2"
+        okhttpVersion = "3.12.8"
+        retrofitVersion = "2.6.4"
+        threetenbpVersion = "1.4.1"
     }
 
     repositories {
