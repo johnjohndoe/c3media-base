@@ -11,7 +11,7 @@ buildscript {
         moshiVersion = "1.8.0"
         okhttpVersion = "3.12.5"
         retrofitVersion = "2.6.2"
-        threetenbpVersion = "1.4.0"
+        threetenbpVersion = "1.4.1"
     }
 
     repositories {
