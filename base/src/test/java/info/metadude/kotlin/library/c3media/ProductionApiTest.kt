@@ -282,8 +282,8 @@ class ProductionApiTest {
     }
 
     private fun assertEventNestedRecording(recording: Recording) = with(recording) {
-        assertThat(size).isNotNull()
-        assertThat(length).isNotNull()
+        // assertThat(size).isNotNull()
+        // assertThat(length).isNotNull()
         assertThat(mimeType).isNotNull
         assertThat(language)
                 .isNotNull
@@ -293,8 +293,8 @@ class ProductionApiTest {
         assertThat(state).isNotNull()
         assertThat(folder).isNotNull()
         assertThat(highQuality).isNotNull()
-        assertThat(width).isNotNull()
-        assertThat(height).isNotNull()
+        // assertThat(width).isNotNull()
+        // assertThat(height).isNotNull()
         assertThat(updatedAt).isNotNull()
         assertThat(recordingUrl).isNotNull()
         assertThat(url).isNotNull()

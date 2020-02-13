@@ -1,5 +1,14 @@
 # c3media-base changelog
 
+## NEXT
+
+* Not released yet
+
+### Changes
+
+* Update test for nested `Recording` object. The `size`, `length`, `width` and `height` fields can be `null`.
+
+
 ## [v.3.0.0](https://github.com/johnjohndoe/c3media-base/releases/tag/v.3.0.0)
 
 * Published: 2019-11-15
