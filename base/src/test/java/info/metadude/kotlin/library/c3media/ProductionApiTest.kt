@@ -132,7 +132,7 @@ class ProductionApiTest {
         assertThat(persons).isNotNull
         assertThat(tags).isNotNull
         // assertThat(date).isNotNull()
-        assertThat(releaseDate).isNotNull()
+        // assertThat(releaseDate).isNotNull()
         assertThat(updatedAt).isNotNull()
         assertThat(length).isNotNull()
         assertThat(thumbUrl).isNotNull()
@@ -206,7 +206,7 @@ class ProductionApiTest {
         assertThat(slug).isNotNull()
         // assertThat(subtitle).isNotNull()
         assertThat(tags).isNotNull
-        assertThat(releaseDate).isNotNull()
+        // assertThat(releaseDate).isNotNull()
         assertThat(promoted).isNotNull()
         assertThat(viewCount).isNotNull()
         assertThat(duration).isNotNull()
@@ -267,7 +267,7 @@ class ProductionApiTest {
         assertThat(persons).isNotNull
         assertThat(tags).isNotNull
         // assertThat(date).isNotNull()
-        assertThat(releaseDate).isNotNull()
+        // assertThat(releaseDate).isNotNull()
         assertThat(updatedAt).isNotNull()
         assertThat(length).isNotNull()
         assertThat(thumbUrl).isNotNull()

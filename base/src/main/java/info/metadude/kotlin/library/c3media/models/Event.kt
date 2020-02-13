@@ -34,7 +34,7 @@ data class Event(
         val recordings: List<Recording>? = null,
         val related: List<RelatedEvent>? = null,
         @Json(name = "release_date")
-        val releaseDate: LocalDate,
+        val releaseDate: LocalDate? = null,
         val slug: String,
         val subtitle: String? = null,
         val tags: List<String?>? = null,
