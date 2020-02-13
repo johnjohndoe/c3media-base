@@ -6,6 +6,7 @@
 
 ### Changes
 
+* Update test for `Conference` object. The `eventLastReleasedAt` field can be `null`.
 * Update test for nested `Recording` object. The `size`, `length`, `width` and `height` fields can be `null`.
 
 
