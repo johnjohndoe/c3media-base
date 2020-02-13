@@ -106,7 +106,7 @@ class ProductionApiTest {
         assertThat(aspectRatio).isNotNull
                 .isNotEqualTo(AspectRatio.UNKNOWN)
         assertThat(updatedAt).isNotNull()
-        assertThat(eventLastReleasedAt).isNotNull()
+        // assertThat(eventLastReleasedAt).isNotNull()
         assertThat(title).isNotNull()
         // conference.scheduleUrl can be null
         assertThat(slug).isNotNull()
@@ -132,7 +132,7 @@ class ProductionApiTest {
         assertThat(persons).isNotNull
         assertThat(tags).isNotNull
         // assertThat(date).isNotNull()
-        assertThat(releaseDate).isNotNull()
+        // assertThat(releaseDate).isNotNull()
         assertThat(updatedAt).isNotNull()
         assertThat(length).isNotNull()
         assertThat(thumbUrl).isNotNull()
@@ -206,7 +206,7 @@ class ProductionApiTest {
         assertThat(slug).isNotNull()
         // assertThat(subtitle).isNotNull()
         assertThat(tags).isNotNull
-        assertThat(releaseDate).isNotNull()
+        // assertThat(releaseDate).isNotNull()
         assertThat(promoted).isNotNull()
         assertThat(viewCount).isNotNull()
         assertThat(duration).isNotNull()
@@ -267,7 +267,7 @@ class ProductionApiTest {
         assertThat(persons).isNotNull
         assertThat(tags).isNotNull
         // assertThat(date).isNotNull()
-        assertThat(releaseDate).isNotNull()
+        // assertThat(releaseDate).isNotNull()
         assertThat(updatedAt).isNotNull()
         assertThat(length).isNotNull()
         assertThat(thumbUrl).isNotNull()
@@ -282,8 +282,8 @@ class ProductionApiTest {
     }
 
     private fun assertEventNestedRecording(recording: Recording) = with(recording) {
-        assertThat(size).isNotNull()
-        assertThat(length).isNotNull()
+        // assertThat(size).isNotNull()
+        // assertThat(length).isNotNull()
         assertThat(mimeType).isNotNull
         assertThat(language)
                 .isNotNull
@@ -293,8 +293,8 @@ class ProductionApiTest {
         assertThat(state).isNotNull()
         assertThat(folder).isNotNull()
         assertThat(highQuality).isNotNull()
-        assertThat(width).isNotNull()
-        assertThat(height).isNotNull()
+        // assertThat(width).isNotNull()
+        // assertThat(height).isNotNull()
         assertThat(updatedAt).isNotNull()
         assertThat(recordingUrl).isNotNull()
         assertThat(url).isNotNull()
