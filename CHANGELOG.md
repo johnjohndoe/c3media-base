@@ -6,6 +6,7 @@
 
 ### Changes
 
+* Use threetenbp v.1.5.2.
 * Update project setup and dependencies (using Kotlin 1.3.61 now).
 * Update `releaseDate` field in `Event` class and the corresponding tests. It can be `null`.
 * Update test for `Conference` object. The `eventLastReleasedAt` field can be `null`.
