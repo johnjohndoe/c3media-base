@@ -7,12 +7,12 @@ compileJava {
 }
 
 dependencies {
-    compile project(':base')
+    implementation project(':base')
 
-    compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
-    testCompile "junit:junit:$junitVersion"
-    testCompile "org.assertj:assertj-core:$assertjVersion"
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.assertj:assertj-core:$assertjVersion"
 }
 
 apply from: rootProject.file('gradle/deploy.gradle')
