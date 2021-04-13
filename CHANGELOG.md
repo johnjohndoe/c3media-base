@@ -6,6 +6,7 @@
 
 ### Changes
 
+* Use moshi v.1.12.0.
 * Use okhttp v.3.12.13.
 * Use threetenbp v.1.5.0.
 * Update project setup and dependencies (using Kotlin 1.3.61 now).
