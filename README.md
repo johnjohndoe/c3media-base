@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/johnjohndoe/c3media-base.svg?branch=master)](https://travis-ci.org/johnjohndoe/c3media-base) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![JitPack](https://jitpack.io/v/johnjohndoe/c3media-base.svg)][jitpack-c3media-base]
+[![Build Status](https://travis-ci.com/johnjohndoe/c3media-base.svg?branch=master)](https://travis-ci.com/johnjohndoe/c3media-base) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![JitPack](https://jitpack.io/v/johnjohndoe/c3media-base.svg)][jitpack-c3media-base]
 
 # c3media-base library
 
