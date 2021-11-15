@@ -1,22 +1,22 @@
-apply plugin: "com.github.ben-manes.versions"
+apply from: "gradle/versions.gradle"
 
 buildscript {
 
     ext {
-        assertjVersion = "3.9.1"
-        gradleBintrayPluginVersion = "1.8.4"
-        gradleVersionsPluginVersion = "0.27.0"
-        junitVersion = "4.13"
-        kotlinVersion = "1.3.61"
-        moshiVersion = "1.9.2"
-        okhttpVersion = "3.12.8"
+        assertjVersion = "3.21.0"
+        gradleBintrayPluginVersion = "1.8.5"
+        gradleVersionsPluginVersion = "0.39.0"
+        junitVersion = "4.13.2"
+        kotlinVersion = "1.5.31"
+        moshiVersion = "1.12.0"
+        okhttpVersion = "3.12.13"
         retrofitVersion = "2.6.4"
-        threetenbpVersion = "1.4.1"
+        threetenbpVersion = "1.5.2"
     }
 
     repositories {
         mavenCentral()
-        jcenter()
+        gradlePluginPortal()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
@@ -28,6 +28,5 @@ buildscript {
 allprojects {
     repositories {
         mavenCentral()
-        jcenter()
     }
 }
