@@ -6,9 +6,10 @@
 
 ### Changes
 
+* Use moshi v.1.12.0.
+* Use kotlin v.1.5.31.
 * Use okhttp v.3.12.13.
 * Use threetenbp v.1.5.2.
-* Update project setup and dependencies (using Kotlin 1.3.61 now).
 * Update `releaseDate` field in `Event` class and the corresponding tests. It can be `null`.
 * Update test for `Conference` object. The `eventLastReleasedAt` field can be `null`.
 * Update test for nested `Recording` object. The `size`, `length`, `width` and `height` fields can be `null`.
