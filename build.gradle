@@ -3,7 +3,7 @@ apply from: "gradle/versions.gradle"
 buildscript {
 
     ext {
-        assertjVersion = "3.21.0"
+        assertjVersion = "3.22.0"
         gradleBintrayPluginVersion = "1.8.5"
         gradleVersionsPluginVersion = "0.42.0"
         junitVersion = "4.13.2"
