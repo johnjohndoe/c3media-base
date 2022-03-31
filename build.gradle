@@ -5,7 +5,7 @@ buildscript {
     ext {
         assertjVersion = "3.21.0"
         gradleBintrayPluginVersion = "1.8.5"
-        gradleVersionsPluginVersion = "0.39.0"
+        gradleVersionsPluginVersion = "0.42.0"
         junitVersion = "4.13.2"
         kotlinVersion = "1.5.31"
         moshiVersion = "1.12.0"
