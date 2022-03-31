@@ -3,15 +3,15 @@ apply from: "gradle/versions.gradle"
 buildscript {
 
     ext {
-        assertjVersion = "3.21.0"
+        assertjVersion = "3.22.0"
         gradleBintrayPluginVersion = "1.8.5"
-        gradleVersionsPluginVersion = "0.39.0"
+        gradleVersionsPluginVersion = "0.42.0"
         junitVersion = "4.13.2"
-        kotlinVersion = "1.5.31"
-        moshiVersion = "1.12.0"
+        kotlinVersion = "1.6.10"
+        moshiVersion = "1.13.0"
         okhttpVersion = "3.12.13"
         retrofitVersion = "2.6.4"
-        threetenbpVersion = "1.5.2"
+        threetenbpVersion = "1.6.0"
     }
 
     repositories {
